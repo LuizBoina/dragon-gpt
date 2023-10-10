@@ -17,6 +17,6 @@ class OpenAIHandler():
     )
     result = response["choices"][0]["message"]["content"]
     print(result)
-    if self.output_file != "":
+    if self.output_file:
       with open(self.output_file, "w") as f:
         f.write(result)
