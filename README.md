@@ -15,6 +15,7 @@
 Dragon-GPT is an AI-powered tool that automatically does the threat modeling analysis on the diagram made using the OWASP Threat Dragon modeling software. It uses the OpenAI API, so you need to have a valid account for their tokens to use on each program call, and the JSON file generated when you save/export an OWASP Threat Dragon project (generally saved in td.vue folder).
 
 The program itself is pretty simple, it extracts every relevant information on the JSON file, like the diagram model and components used on the modeling, and transforms it into a human-readable sentence. After that, the sentence is send via OpenAI API, and the result of the analysis is printed. By default, it uses `chatgpt-3.5-turbo` but you can change that via parameter to another model like the `chatgpt-4`.
+
 ---
 
 ### Download and install
