@@ -7,8 +7,8 @@ class OpenAIHandler():
     self.output_file = output_file
 
   def do_threat_modeling(self, sentence):
-    print("Processing the request, please wait...")
-    context = "You are a helpful assistant that do threat modeling analysis based on described scenarios"
+    print("Processing your request, please wait...")
+    context = "Generate Threats and their Preventive Measures"
     response = openai.ChatCompletion.create(model=self.model,
       messages=[
         {"role": "system", "content": context},

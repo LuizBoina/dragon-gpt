@@ -1,0 +1,33 @@
+Threats and Preventive Measures:
+
+1. Spoofing Identity:
+- Threat: An attacker can impersonate a legitimate user or server to gain unauthorized access to the system.
+- STRIDE: Spoofing
+- Preventive Measures: Implement strong and secure authentication mechanisms such as multi-factor authentication (MFA), certificates, or tokens to verify the identity of users and servers.
+
+2. Tampering:
+- Threat: An attacker can modify data or messages in transit between the user, web server, backend server, and the database.
+- STRIDE: Tampering
+- Preventive Measures: Implement data integrity checks, such as checksums or digital signatures, to detect any unauthorized modification. Use secure protocols (e.g., HTTPS) for encryption and validation of data in transit.
+
+3. Repudiation:
+- Threat: A user or server can deny their actions or transactions, making it difficult to trace back any malicious activity.
+- STRIDE: Repudiation
+- Preventive Measures: Implement comprehensive logging mechanisms to record user and server activities. Use digital signatures or audit trails to maintain non-repudiation and accountability.
+
+4. Information Disclosure:
+- Threat: Sensitive information, such as user credentials or system data, can be exposed to unauthorized individuals.
+- STRIDE: Information Disclosure
+- Preventive Measures: Employ proper access controls and authentication mechanisms to ensure that only authorized users can access sensitive data. Implement encryption for data at rest and in transit. Regularly perform security assessments to identify and address vulnerabilities.
+
+5. Denial of Service (DoS):
+- Threat: An attacker can overwhelm the system's resources, making it unavailable to legitimate users.
+- STRIDE: Denial of Service
+- Preventive Measures: Implement rate limiting, session management, and traffic filtering mechanisms to mitigate DoS attacks. Regularly monitor system performance and traffic patterns to detect and block suspicious activity.
+
+6. Elevation of Privilege:
+- Threat: An attacker exploits vulnerabilities to gain unauthorized administrative privileges or access to sensitive information.
+- STRIDE: Elevation of Privilege
+- Preventive Measures: Follow the principle of least privilege (PoLP) and implement strong access controls to ensure that users and servers can only access the necessary resources. Regularly patch and update software to mitigate known vulnerabilities. Implement intrusion detection and prevention systems (IDS/IPS) to detect and block unauthorized access attempts.
+
+Remember, threat modeling should be an ongoing process, and it's essential to continuously reassess and address new threats as they evolve.

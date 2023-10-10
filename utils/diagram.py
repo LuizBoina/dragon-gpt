@@ -94,16 +94,20 @@ class DiagramHandler():
   def make_actor_sentence(self, comp):
     sentence = self.intro_sentence(comp)
     if comp["providesAuthentication"]:
-      sentence += ", which don't need to authenticate,"
+        sentence += ", which doesn't need to authenticate."
+        # Add preventive measures
+        sentence += " To enhance security, consider implementing authentication mechanisms."
     else:
-      sentence += ", which need to authenticate,"
+      sentence += ", which needs to authenticate."
     sentence += self.make_flow_sentence(comp["flow"])
     return self.format_sentence(sentence)
-    
+
+
 
   def make_process_sentence(self, comp):
     sentence = self.intro_sentence(comp)
     sentence += self.make_flow_sentence(comp["flow"])
+    
     return self.format_sentence(sentence)
     
 
@@ -210,6 +214,7 @@ class DiagramHandler():
         
   def make_sentence(self):
     self.read_data()
+
     self.sort_components()
     self.add_flow_to_the_components()
     introduction = "I will describe the components of a software architecture and I need your help to do the threat modeling of this scenario.\nThe components are these:\n"
