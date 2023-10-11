@@ -197,46 +197,52 @@
           {
             "shape": "flow",
             "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
+                "line": {
+                    "stroke": "#333333",
+                    "targetMarker": {
+                        "name": "block"
+                    },
+                    "sourceMarker": {
+                        "name": ""
+                    },
+                    "strokeDasharray": null
+                }
             },
             "width": 200,
             "height": 100,
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Flow",
-              "name": "HTTP Request",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": false,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": true,
-              "isPublicNetwork": true,
-              "hasOpenThreats": false,
-              "threats": []
+                "type": "tm.Flow",
+                "name": "HTTP Request\n",
+                "description": "",
+                "outOfScope": false,
+                "isBidirectional": false,
+                "reasonOutOfScope": "",
+                "protocol": "",
+                "isEncrypted": true,
+                "isPublicNetwork": true,
+                "hasOpenThreats": false,
+                "threats": [],
+                "preventive_measures": "Use HTTPS for secure communication."
             },
-            "id": "2b3a70ca-3a54-4554-b593-d046f927a804",
+            "id": "cc446d57-3b30-4fe3-a809-ae3e5ffa035c",
             "source": {
-              "cell": "524f8f6c-2f4a-4a44-af88-36875d5dfbeb"
+                "cell": "6acac013-c8db-4745-8541-927b06e4f512"
             },
             "target": {
-              "cell": "d247630a-39b6-4835-a70a-aa3d17de3fb0"
+                "cell": "524f8f6c-2f4a-4a44-af88-36875d5dfbeb"
             },
-            "vertices": [],
+            "vertices": [
+                {
+                    "x": 490,
+                    "y": 280
+                }
+            ],
             "labels": [
-              "HTTP Request"
+                "HTTP Request\n"
             ]
-          },
+        },        
           {
             "shape": "flow",
             "attrs": {
