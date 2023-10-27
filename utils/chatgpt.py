@@ -1,10 +1,9 @@
 import openai
 
 class OpenAIHandler():
-  def __init__(self, api_key, ai_model, output_file):
+  def __init__(self, api_key, ai_model):
     openai.api_key = api_key
     self.model = ai_model
-    self.output_file = output_file
 
   def do_threat_modeling(self, sentence):
     print("Processing your request, please wait...")
@@ -15,8 +14,5 @@ class OpenAIHandler():
         {"role": "user", "content": sentence}
       ]
     )
-    result = response["choices"][0]["message"]["content"]
-    print(result)
-    if self.output_file:
-      with open(self.output_file, "w") as f:
-        f.write(result)
+    response = response["choices"][0]["message"]["content"]
+    return response
