@@ -12,7 +12,7 @@
 
 ## General Updates
 
-- [Update on 27/10/23] Add Support to Local LLM, the Llama 2, so you don't need to have a OpenAI account and even credits on that. The results using Llama may be inferior and slower then to ChatGPT but at least it's free. :grin:
+- [Update on 27/10/23] Add Support to Local LLM, the Llama 2, so you don't need an OpenAI account and even credits in that. The results using Llama may be inferior and slower than ChatGPT but at least it's free. :grin:
 
 ### Summary
 
@@ -40,10 +40,10 @@ The program itself is pretty simple, it extracts every relevant information on t
   # To run using local LLM (Llama 2) you need to install python3-dev:
   $ apt install python3-dev
 
-  # You will also need a model that can be find on https://huggingface.co/TheBloke/Llama-2-7B-GGUF/tree/main
+  # You will also need a gguf model, available at https://huggingface.co/TheBloke/Llama-2-7B-GGUF/tree/main,
   # or just skip this step to install automatically the default used in this project, the llama-2-7b.Q8_0.gguf.
-  # This recommended model uses 7Gb or disk and 10GB of RAM when running.
-  # Model should be placed on /utils/local_llm/model
+  # This default model uses 7Gb on disk and 10GB of RAM when running, but more powerful models are available in the repository cited.
+  # The model file should be placed on /utils/local_llm/model
 
   # Run using Llama 2
   $ python main.py -l diagram/basic_scenario.json
