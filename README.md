@@ -12,7 +12,7 @@
 
 ## General Updates
 
-- [Update on 27/10/23] Add Support to Local LLM, the Llama 2, so you don't need an OpenAI account and even credits in that. The results using Llama may be inferior and slower than ChatGPT but at least it's free. :grin:
+- [Update on 27/10/23] Add Support to Local LLM, the Llama 2, so you don't need an OpenAI account. The results using Llama may be inferior and slower than ChatGPT but at least it's free. :grin:
 
 ### Summary
 
