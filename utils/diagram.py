@@ -45,7 +45,7 @@ class DiagramHandler():
         elif new_comp["type"] == DiagramHandler.flow_type:
           new_comp["source"] = comp["source"]["cell"]
           new_comp["target"] = comp["target"]["cell"]
-          new_comp["isBidirectional"] = comp["data"]["isBidirectional"]
+          new_comp["isBidirectional"] = comp["data"].get("isBidirectional", False)
           new_comp["isEncrypted"] = comp["data"]["isEncrypted"]
           new_comp["protocol"] = comp["data"]["protocol"]
           new_comp["isPublicNetwork"] = comp["data"]["isPublicNetwork"]
@@ -148,7 +148,6 @@ class DiagramHandler():
       if comp["type"] == DiagramHandler.trust_boundary_curve_type:
         is_outside = self.is_outside_of_tb_curve(_comp["position"], comp["vertices"])
       else:
-        print(comp)
         is_outside = self.is_outside_of_tb_box(_comp["position"], comp["position"], comp["size"])
       if is_outside:
         outside.append(_comp["name"])
