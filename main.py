@@ -12,7 +12,7 @@ def handle_arguments():
   parser.add_argument("filename", help="Path to the diagram (json format expected)")
   parser.add_argument("--api_key", "-k", help="Pass the key as a parameter or set it in .env file")
   parser.add_argument("--model", "-m", default="gpt-3.5-turbo", help="AI Model to be used by OpenAI API (default: gpt-3.5-turbo)")
-  parser.add_argument("--output", "-o", default="output.txt", help="Export the response from OpenAI to a txt file")
+  parser.add_argument("--output", "-o", help="Export the response from OpenAI to a txt file")
   parser.add_argument("--use_local_llm", "-l", default=False, action="store_true", help="Set to true if you want to use a local LLM")
   parser.add_argument("--n_ctx", "-c", help="(Recommended when using local LLM) Number of tokens the LLM uses for context, generally high numbers (>2048) gives longer responses but takes more time.")
   args = parser.parse_args()
@@ -40,7 +40,10 @@ if __name__ == "__main__":
           exit()
       chatgpt = OpenAIHandler(openai_key, args.model)
       response = chatgpt.do_threat_modeling(sentence)
-
+      if(response is None):
+        print("Error on OpenAI communication")
+        exit()
+      
       for comp in diagram.components:
         if comp["type"] == DiagramHandler.flow_type:
           for flow in comp["flow"]:
